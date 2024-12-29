@@ -1,0 +1,27 @@
+{
+  "name": "whatsapp-web",
+  "description": "WhatsApp Web client using whatsapp-web.js",
+  "repository": "https://github.com/yourusername/your-repository", 
+  "logo": "https://yourlogo.com/logo.png", 
+  "keywords": ["whatsapp", "web", "client", "node.js"],
+  "env": {
+    "PORT": {
+      "description": "Port for the app",
+      "value": "3000"
+    }
+  },
+  "scripts": {
+    "postdeploy": "npm install && npm run build"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
